@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/notas.css" />
+  </head>
+  <body>
+    <div class="supporting">
+      <div class="wrapper">
+        <h3>Envía una nota</h3>
+        <p></p>
+        <form>
+          <input type="text" name="firstName" placeholder="De:" /><br />
+          <input type="text" name="lastName" placeholder="Para" /><br />
+          <textarea placeholder="Escribir Nota" rows="5" cols="36"></textarea
+          ><br />
+          <input id="submit" type="submit" name="submit" value="Enviar" />
+        </form>
+        <a href="./panel.html"
+          ><button class="buttonBack">Volver a la pantalla principal</button></a
+        >
+      </div>
+    </div>
+    <div class="toast hidden">Nota enviada exitosamente</div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.querySelector("form");
+      const toast = document.querySelector(".toast");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Evita que el formulario se envíe
+
+        // Aquí puedes agregar cualquier otra lógica que necesites antes de mostrar el toast
+
+        toast.classList.remove("hidden"); // Muestra el toast
+        setTimeout(function () {
+          toast.classList.add("hidden"); // Oculta el toast después de un tiempo
+        }, 3000); // Cambia el valor 3000 a la cantidad de milisegundos que deseas que el toast permanezca visible
+      });
+    });
+  </script>
+</html>

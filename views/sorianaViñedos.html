@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalles de Obra</title>
+    <link rel="stylesheet" href="../styles/sorianaViñedos.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+      }
+
+      .container {
+        width: 80%;
+        margin: 50px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        display: flex; /* Utilizamos flexbox para alinear elementos */
+      }
+
+      .obra-info {
+        flex: 1; /* Ocupa el espacio restante */
+        margin-right: 20px; /* Espacio entre la imagen y el texto */
+      }
+
+      .obra-info h3 {
+        width: 50%;
+        margin-top: 0;
+        font-size: 24px;
+        color: #56658f;
+      }
+
+      .obra-info p {
+        margin: 5px 0;
+        font-size: 18px;
+        color: #333;
+      }
+
+      .obra-image {
+        height: 100%;
+        width: 50%;
+      }
+
+      .obra-image img {
+        height: 100%;
+        width: 100%;
+      }
+
+      .back-button {
+        margin-left: 70px;
+        margin-top: 30px;
+        background-color: #56658f;
+        color: #fff;
+        border: none;
+        width: 80%;
+        height: 70px;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 30px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .back-button:hover {
+        background-color: #475879;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <nav class="navbar">
+        <a href="../index.html" class="logo">
+          <img src="../images/LOGO_COP-removebg-preview.png" alt="Logo" />
+        </a>
+        <ul class="main-nav">
+          <li><a href="./formAlta.html" class="nav-links">Alta</a></li>
+          <li><a href="./panel.html" class="nav-links">Personal</a></li>
+          <li><a href="./notas.html" class="nav-links">Notas</a></li>
+          <li><a href="./perfil.html" class="nav-links">Perfil</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="container">
+      <div class="obra-info">
+        <h3>Detalles de Obra</h3>
+        <ul>
+          <li><p>Ubicación de Planta: Torreón</p></li>
+          <li><p>Número de Obra: 38123</p></li>
+          <li><p>Nombre de la Obra: Soriana Viñedos</p></li>
+          <li>
+            <p>
+              Domicilio: E. López Sánchez 10, Los Viñedos, 27023 Torreón, Coah.
+            </p>
+          </li>
+          <li><p>Resistencia: FC= 250T.B</p></li>
+          <li><p>Volúmen: 15.00</p></li>
+          <li><p>Surtido: 7.00</p></li>
+          <li><p>Nombre del Operador: Luis Torres</p></li>
+          <li><p>Unidad Revolvedora: CR-02</p></li>
+          <li><p>Hora de Salida de la Planta: 09:35:24 a.m.</p></li>
+          <li>
+            <p>
+              Servicios y Especificaciones: Tiro directo con fibra, junto con
+              acelerante de 72 horas.
+            </p>
+          </li>
+        </ul>
+        <button class="back-button" onclick="history.back()">
+          Regresar a la página anterior
+        </button>
+      </div>
+      <div class="obra-image">
+        <img src="../images/soriana.jpeg" alt="Imagen de la obra" />
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obras de COPLASA</title>
+    <link rel="stylesheet" href="../styles/obrasGeneral.css" />
+    <style>
+      .container {
+        width: 80%;
+        margin: 50px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
+
+      .obra {
+        background-color: #f0f0f0;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 20px;
+        position: relative;
+      }
+
+      .obra h3 {
+        margin: 0;
+        font-size: 18px;
+      }
+
+      .obra p {
+        margin: 5px 0;
+        font-size: 14px;
+      }
+
+      .ver-detalles {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        background-color: #56658f;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 30px;
+        height: 70%;
+        transition: background-color 0.3s ease;
+      }
+
+      .ver-detalles:hover {
+        background-color: #475879;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <nav class="navbar">
+        <a href="../index.html" class="logo">
+          <img src="../images/LOGO_COP-removebg-preview.png" alt="Logo" />
+        </a>
+        <ul class="main-nav">
+          <li><a href="./formAlta.html" class="nav-links">Alta</a></li>
+          <li><a href="./panel.html" class="nav-links">Personal</a></li>
+          <li><a href="./notas.html" class="nav-links">Notas</a></li>
+          <li><a href="./perfil.html" class="nav-links">Perfil</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="container">
+      <div class="obra">
+        <h3>Soriana Viñedos</h3>
+        <p>Domicilio: E. López Sánchez 10, Los Viñedos, 27023 Torreón, Coah.</p>
+        <p>Fecha de Inicio: 01/04/2024</p>
+        <a href="./sorianaViñedos.html"
+          ><button class="ver-detalles">Ver Detalles</button></a
+        >
+      </div>
+      <div class="obra">
+        <h3>City Club Viñedos</h3>
+        <p>
+          Domicilio: E. López Sánchez 10-int 7A, Los Viñedos, 27023 Torreón,
+          Coah.
+        </p>
+        <p>Fecha de Inicio: 10/04/2024</p>
+        <button class="ver-detalles">Ver Detalles</button>
+      </div>
+      <div class="obra">
+        <h3>Torres Empiria II</h3>
+        <p>
+          Domicilio: Periférico Raúl López Sánchez 5000, Ejido Ignacio Allende,
+          27018 Torreón, Coah.
+        </p>
+        <p>Fecha de Inicio: 15/04/2024</p>
+        <button class="ver-detalles">Ver Detalles</button>
+      </div>
+      <div class="obra">
+        <h3>Lincoln Electric</h3>
+        <p>
+          Domicilio: Boulevard Independencia 224, Francisco Villa , Torreón,
+          Coah.
+        </p>
+        <p>Fecha de Inicio: 20/04/2024</p>
+        <button class="ver-detalles">Ver Detalles</button>
+      </div>
+    </div>
+  </body>
+</html>

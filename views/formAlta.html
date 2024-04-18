@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Alta</title>
+    <link rel="stylesheet" href="../styles/formAlta.css" />
+  </head>
+  <style>
+    .container {
+      width: 80%;
+      margin: 50px auto;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="file"],
+    select {
+      width: 99%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button[type="submit"] {
+      background-color: #797bba;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup-content {
+      text-align: center;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+  <body>
+    <div>
+      <nav class="navbar">
+        <a href="../index.html" class="logo">
+          <img src="../images/LOGO_COP-removebg-preview.png" alt="Logo" />
+        </a>
+        <ul class="main-nav">
+          <li><a href="./panel.html" class="nav-links">Personal</a></li>
+          <li><a href="./obrasGeneral.html" class="nav-links">Obras</a></li>
+          <li><a href="./notas.html" class="nav-links">Notas</a></li>
+          <li><a href="./perfil.html" class="nav-links">Perfil</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="container">
+      <form id="altaForm">
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required />
+        </div>
+        <div class="form-group">
+          <label for="apellidoPaterno">Apellido Paterno:</label>
+          <input
+            type="text"
+            id="apellidoPaterno"
+            name="apellidoPaterno"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="apellidoMaterno">Apellido Materno:</label>
+          <input
+            type="text"
+            id="apellidoMaterno"
+            name="apellidoMaterno"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="ine">Identificación INE:</label>
+          <input type="file" id="ine" name="ine" accept="image/*" required />
+        </div>
+        <div class="form-group">
+          <label for="licencia">Licencia de Manejo:</label>
+          <input
+            type="file"
+            id="licencia"
+            name="licencia"
+            accept="image/*"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="areaTrabajo">Área de Trabajo:</label>
+          <select id="areaTrabajo" name="areaTrabajo" required>
+            <option value="">Selecciona una opción</option>
+            <option value="administracion">Administración</option>
+            <option value="produccion">Cartera</option>
+            <option value="ventas">Ventas</option>
+            <option value="ventas">Control de calidad</option>
+            <option value="ventas">Producción</option>
+            <option value="ventas">Mantenimiento</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="puesto">Puesto:</label>
+          <select id="puesto" name="puesto" required>
+            <option value="">Selecciona una opción</option>
+            <option value="gerente">Jefe de área</option>
+            <option value="supervisor">Jefe de planta</option>
+            <option value="operario">Asesor Comercial</option>
+            <option value="operario">Mecánico</option>
+            <option value="operario">Auxiliar Mecánico</option>
+            <option value="operario">Operador</option>
+            <option value="operario">Dosificador</option>
+            <option value="operario">Auxiliar General</option>
+            <option value="operario">Laboratista</option>
+          </select>
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+
+    <!-- Popup para mensaje de confirmación -->
+    <div id="popup" class="popup hidden">
+      <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <p>¡Usuario dado de alta en el sistema!</p>
+      </div>
+    </div>
+
+    <script>
+      // Función para mostrar el popup
+      function showPopup() {
+        const popup = document.getElementById("popup");
+        popup.classList.remove("hidden");
+        // Redirigir después de 2 segundos
+        setTimeout(function () {
+          window.location.href = "./panel.html";
+        }, 2000);
+      }
+
+      // Función para cerrar el popup
+      function closePopup() {
+        const popup = document.getElementById("popup");
+        popup.classList.add("hidden");
+      }
+
+      // Agregar evento submit al formulario
+      document
+        .getElementById("altaForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevenir envío del formulario
+          showPopup(); // Mostrar el popup
+        });
+    </script>
+  </body>
+</html>
